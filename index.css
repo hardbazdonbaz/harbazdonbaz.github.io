@@ -1,0 +1,192 @@
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Container */
+.blog-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Header styles */
+.blog-header {
+  border-bottom: 1px solid #FF0000;
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+
+.terminal-prompt {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.terminal-user {
+  color: #FF0000;
+  margin-right: 10px;
+}
+
+.blog-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.terminal-cursor {
+  width: 8px;
+  height: 20px;
+  background-color: #FF0000;
+  display: inline-block;
+  animation: blink 1s step-end infinite;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.logo-wrapper {
+  padding: 10px 20px;
+}
+
+/* Glitch text effect */
+.glitch-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #FF0000;
+  animation: glitch 400ms infinite;
+  position: relative;
+}
+
+/* Blog post card */
+.posts-container {
+  display: grid;
+  gap: 30px;
+}
+
+.post-card {
+  background-color: #111;
+  border-left: 2px solid #FF0000;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.post-header {
+  margin-bottom: 15px;
+}
+
+.post-title {
+  font-size: 1.3rem;
+  color: #FF0000;
+  margin-bottom: 5px;
+}
+
+.post-meta {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.post-content {
+  margin-bottom: 20px;
+}
+
+.post-footer {
+  font-size: 0.8rem;
+  color: #888;
+  padding-top: 10px;
+  border-top: 1px dashed #333;
+}
+
+.terminal-prompt-small {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+/* Footer */
+.blog-footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.terminal-line {
+  margin-bottom: 10px;
+}
+
+.footer-text {
+  font-size: 0.7rem;
+}
+
+/* Animations */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Simple red glitch effect */
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75);
+  }
+  25% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75);
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75);
+  }
+  75% {
+    text-shadow: -0.025em -0.05em 0 rgba(255, 0, 0, 0.75);
+  }
+  100% {
+    text-shadow: 0.025em 0 0 rgba(255, 0, 0, 0.75);
+  }
+}
+
+/* Shake animation */
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-3px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(3px, 0, 0);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  .post-card {
+    padding: 15px;
+  }
+  
+  .glitch-text {
+    font-size: 1rem;
+  }
+  }
